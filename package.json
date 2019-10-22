@@ -1,0 +1,26 @@
+{
+  "name": "pager-alarm-with-weather",
+  "version": "1.0.0",
+  "description": "Sends a daily Pager message to rabbitMQ with some Weather Info",
+  "main": "index.js",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "amqp-connection-manager": "^3.0.0",
+    "forecastio": "^2.0.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuddlycheetah/pager-alarm-with-weather.git"
+  },
+  "author": "cuddlycheetah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuddlycheetah/pager-alarm-with-weather/issues"
+  },
+  "homepage": "https://github.com/cuddlycheetah/pager-alarm-with-weather#readme"
+}
