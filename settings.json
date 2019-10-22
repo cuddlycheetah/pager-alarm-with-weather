@@ -1,0 +1,6 @@
+{
+    "forecastAPIKey": "",
+    "amqpURI": "amqp://user:pw@server",
+    "lat": 0,
+    "lng": 0
+}
