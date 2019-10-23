@@ -23,9 +23,19 @@ const getBericht = new Promise(async (res) => {
     res(bericht)
 })
 getBericht
-.then(bericht => {
-    console.log(bericht)
-    return channelWrapper.sendToQueue('input', ['2B', bericht])
+.then(str => {
+    
+	str = str.replace(/Ä/g, '[')
+	str = str.replace(/Ü/g, '[')
+	str = str.replace(/Ö/g, '\\')
+
+	str = str.replace(/ä/g, '{')
+	str = str.replace(/ö/g, '|')
+	str = str.replace(/ü/g, '}')
+	str = str.replace(/ß/g, '~')
+
+    console.log(str)
+    return channelWrapper.sendToQueue('input', ['2B', str])
 })
 .then(() => process.exit(0))
 .catch(() => process.exit(0))
