@@ -17,7 +17,7 @@ const getBericht = new Promise(async (res) => {
     try {
         let forecastIO = await forecastIo.forecast(settings.lat, settings.lng,  { units: 'si', lang: 'de' })
         bericht = `${ forecastIO.currently.temperature }C*${ forecastIO.hourly.summary }`
-    } catch {
+    } catch (e) {
         
     }
     res(bericht)
