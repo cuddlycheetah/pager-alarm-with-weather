@@ -16,7 +16,7 @@ const getBericht = new Promise(async (res) => {
     let bericht = 'Error'
     try {
         let forecastIO = await forecastIo.forecast(settings.lat, settings.lng,  { units: 'si', lang: 'de' })
-        bericht = `${ forecastIO.currently.temperature }C*${ forecastIO.hourly.summary }`
+        bericht = `${ forecastIO.currently.temperature }C\n\n${ forecastIO.hourly.summary.replace(/(\r\n|\n|\r)/gm, '') }`
     } catch (e) {
         
     }
